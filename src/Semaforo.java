@@ -29,15 +29,35 @@ public class Semaforo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jColorChooser1 = new javax.swing.JColorChooser();
+        jDialog1 = new javax.swing.JDialog();
         lblsemaforo = new javax.swing.JLabel();
         lblimagen = new javax.swing.JLabel();
         btnGuardar = new javax.swing.JButton();
         txtnumero = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog1Layout.setVerticalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 153, 255));
+
+        lblsemaforo.setBackground(new java.awt.Color(0, 255, 153));
+        lblsemaforo.setForeground(new java.awt.Color(0, 204, 153));
         lblsemaforo.setText("SEMAFORO");
 
+        lblimagen.setBackground(new java.awt.Color(255, 204, 255));
+
+        btnGuardar.setBackground(new java.awt.Color(255, 204, 204));
+        btnGuardar.setForeground(new java.awt.Color(204, 0, 153));
         btnGuardar.setText("Cambiar semaforo");
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,10 +111,11 @@ public class Semaforo extends javax.swing.JFrame {
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
     // TODO add your handling code here:
 
-txtnumero.setEditable(true);  // Permitir que el usuario edite el contenido de txtnumero
+txtnumero.setEditable(true);  
 
-btnGuardar.addActionListener(new java.awt.event.ActionListener() {
-    public void actionPerformed(java.awt.event.ActionEvent evt) {
+
+
+
         try {
             int opcion = Integer.parseInt(txtnumero.getText());
 
@@ -113,8 +134,7 @@ btnGuardar.addActionListener(new java.awt.event.ActionListener() {
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "Formato de número no válido", "Error", JOptionPane.ERROR_MESSAGE);
         }
-    }
-});
+    
 
 
     }//GEN-LAST:event_btnGuardarActionPerformed
@@ -160,6 +180,8 @@ btnGuardar.addActionListener(new java.awt.event.ActionListener() {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGuardar;
+    private javax.swing.JColorChooser jColorChooser1;
+    private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel lblimagen;
     private javax.swing.JLabel lblsemaforo;
     private javax.swing.JTextField txtnumero;
